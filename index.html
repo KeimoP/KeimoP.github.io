@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="et">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minu mdea mitmes website</title>
+    <title>Minu Moodsad Veebileht</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Tere tulemast Keimo veebilehele!</h1>
+        <div class="container">
+            <h1>Tere tulemast Keimo veebilehele!</h1>
+            <p class="tagline">Koodin ja loon, mis mul meeldib</p>
+        </div>
     </header>
+
     <nav>
         <ul>
             <li><a href="#about">Minust</a></li>
@@ -17,20 +24,38 @@
             <li><a href="#contact">Kontakt</a></li>
         </ul>
     </nav>
-    <section id="about">
-        <h2>Minust</h2>
-        <p>Oled õpilane ja ise koodin seda lehte nii nagu tahan!</p>
-    </section>
-    <section id="projects">
-        <h2>Minu projektid</h2>
-        <ul>
-            <li><a href="https://github.com/keimop/python">Python</a></li>
-            <li><a href="https://github.com/sinukasutajanimi/projekt2">Projekt 2</a></li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>E-post: <a href="mailto:keimo.plaas22@email.com">keimo.plaas22@email.com</a></p>
-    </section>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>Minust</h2>
+                <p>Olen õpilane, kes armastab koodimist. Loomisin selle lehe ise ning teen seda, mis mulle meeldib.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Minu projektid</h2>
+                <ul>
+                    <li><a href="https://github.com/keimop/python" target="_blank">Python Projektid</a></li>
+                    <li><a href="https://github.com/sinukasutajanimi/projekt2" target="_blank">Projekt 2</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <p>E-post: <a href="mailto:keimo.plaas22@email.com">keimo.plaas22@email.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Keimo. Kõik õigused kaitstud.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

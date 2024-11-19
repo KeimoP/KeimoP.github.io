@@ -5,11 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #0f0f0f; /* Dark background for contrast */
-    color: #fff; /* White text color for readability */
+    background: #0f0f0f;
+    color: #fff;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Utility Class for Containers */
@@ -22,11 +24,11 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #1e2a38, #0c1b2a); /* Dark gradient */
+    background: linear-gradient(135deg, #1e2a38, #0c1b2a); 
     color: #fff;
     text-align: center;
     padding: 4rem 0;
-    border-bottom: 2px solid #3498db; /* Subtle border for separation */
+    border-bottom: 2px solid #3498db; 
 }
 
 header h1 {
@@ -80,9 +82,38 @@ nav ul li a:hover {
     text-shadow: 0 0 15px #3498db, 0 0 20px #3498db;
 }
 
-/* Main Content */
-main {
-    padding: 4rem 0;
+/* Slide-In Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* About Section */
@@ -92,6 +123,7 @@ main {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin-bottom: 4rem;
+    animation: slideInLeft 1s ease-out; /* Slide in from left */
 }
 
 #about h2 {
@@ -118,6 +150,7 @@ main {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin-bottom: 4rem;
+    animation: slideInRight 1s ease-out; /* Slide in from right */
 }
 
 #projects h2 {
@@ -165,6 +198,7 @@ main {
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: slideInUp 1s ease-out; /* Slide up animation */
 }
 
 #contact h2 {

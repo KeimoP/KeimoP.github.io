@@ -8,10 +8,10 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #121212; /* Dark gray background for contrast without pure black */
+    background: linear-gradient(135deg, #1b1b2f, #162447); /* Festive dark gradient */
     color: #fff;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* Utility Class for Containers */
@@ -24,11 +24,11 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #3d3f60, #2b3052); /* Deep blue gradient */
+    background: linear-gradient(135deg, #e74c3c, #d35400); /* Christmas red gradient */
     color: #fff;
     text-align: center;
     padding: 4rem 0;
-    border-bottom: 2px solid #3498db; /* Neon blue border for separation */
+    border-bottom: 3px solid #f39c12; /* Gold border for Christmas vibe */
 }
 
 header h1 {
@@ -37,12 +37,12 @@ header h1 {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 30px #3498db; /* Glowing effect */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 30px #f1c40f; /* Golden glowing effect */
 }
 
 header .tagline {
     font-size: 1.2rem;
-    color: #ecf0f1;
+    color: #f7dc6f; /* Light gold text */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.5rem;
@@ -69,7 +69,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #f7dc6f; /* Light gold links */
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -77,48 +77,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #3498db;
+    color: #e74c3c; /* Christmas red hover effect */
     transform: scale(1.1);
-    text-shadow: 0 0 15px #3498db, 0 0 20px #3498db;
-}
-
-/* Slide-In Animations */
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    text-shadow: 0 0 15px #e74c3c, 0 0 20px #e74c3c;
 }
 
 /* About Section */
 #about {
-    background: #2c3e50; /* A deep navy with a slight blue hue */
+    background: #2ecc71; /* Festive green */
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Lightened box shadow */
@@ -145,7 +111,7 @@ nav ul li a:hover {
 
 /* Projects Section */
 #projects {
-    background: #34495e; /* Darker shade with blue undertones */
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Icy blue gradient */
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -171,7 +137,7 @@ nav ul li a:hover {
 
 #projects ul li {
     padding: 1rem 2rem;
-    background: #2980b9; /* Electric blue for hover effect */
+    background: #e74c3c; /* Festive red */
     border-radius: 10px;
     text-align: center;
     font-size: 1.1rem;
@@ -187,14 +153,14 @@ nav ul li a:hover {
 }
 
 #projects ul li:hover {
-    background: #3498db; /* Light neon blue hover effect */
+    background: #f39c12; /* Gold hover effect */
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Contact Section */
 #contact {
-    background: #2c3e50; /* Deep navy background */
+    background: #34495e; /* Deep navy with subtle blue undertone */
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -217,57 +183,26 @@ nav ul li a:hover {
 }
 
 #contact a {
-    color: #3498db;
+    color: #f39c12; /* Gold links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 #contact a:hover {
-    color: #1abc9c;
+    color: #e74c3c;
 }
 
 /* Footer */
 footer {
-    background: #34495e; /* Deep blue footer for consistency */
+    background: #162447; /* Dark gradient footer */
     color: #ecf0f1;
     text-align: center;
     padding: 2rem 0;
     margin-top: 4rem;
-    border-top: 2px solid #3498db; /* Blue border */
+    border-top: 2px solid #e74c3c; /* Festive red border */
 }
 
 footer p {
     font-size: 1rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    nav ul li {
-        font-size: 1.2rem;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header .tagline {
-        font-size: 1rem;
-    }
-
-    #projects ul {
-        width: 80%;
-    }
-
-    #projects ul li {
-        width: 100%;
-    }
+    color: #f7dc6f;
 }

@@ -58,6 +58,7 @@ header {
 
 header h1 {
     font-size: 3.5rem;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;

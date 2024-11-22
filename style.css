@@ -1,219 +1,154 @@
-/* Reset Default Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styles */
+/* General Body Styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1e3a5f, #162447);
-    color: #fff;
-    line-height: 1.6;
-    overflow-x: hidden;
+	background-color: #a1b8ce;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
 }
 
-/* Add snowflake animation */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.imgur.com/OdfF8Vj.png') repeat;
-    opacity: 0.15; /* Subtle opacity */
-    z-index: -1;
-    animation: snow 20s linear infinite; /* Slower movement */
+/* Emoji Styling */
+.sleigh {
+	font-size: 3rem;
+	color: transparent; /* Set color to transparent to re-color emojis */
+	text-shadow: 0 0 0 #06223f; /* Recolor emojis */
 }
 
-@keyframes snow {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100vw 100vh;
-    }
+/* Santa Animation Styling */
+.santa, .santa1, .santa2, .santa3, .santa4, .santa5 {
+	animation-name: up, across;
+	animation-duration: 10s, 6.5s;
+	animation-timing-function: ease-in-out, linear;
+	animation-iteration-count: 1, 1;
+	position: absolute;
+	right: -80px;
+	top: 100px;
+	z-index: 2;
+	filter: blur(1px);
 }
 
-/* Utility Class for Containers */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+.santa { animation-delay: 3s, 5s; }
+.santa1 { animation-delay: 3.2s, 5.1s; }
+.santa2 { animation-delay: 3.4s, 5.2s; }
+.santa3 { animation-delay: 3.6s, 5.3s; }
+.santa4 { animation-delay: 3.8s, 5.4s; }
+.santa5 { animation-delay: 4s, 5.6s; }
+
+/* Snowflake Styling */
+.fa-snowflake {
+	color: #ecf2f8;
 }
 
-/* Header */
-header {
-    background: linear-gradient(135deg, #ff4b5c, #ff934f);
-    color: #fff;
-    text-align: center;
-    padding: 3rem 1rem;
-    border-bottom: 3px solid #f39c12;
-    position: relative;
-    overflow: hidden;
+.snow {
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
 
-header::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    opacity: 0.1; /* Softer opacity */
+.snowflake, .snowflake1, .snowflake2, .snowflake3, .snowflake4, .snowflake5, 
+.snowflake6, .snowflake7, .snowflake8, .snowflake9, .snowflake10, .snowflake11, 
+.snowflake12, .snowflake13, .snowflake14 {
+	animation-name: fall, shake;
+	animation-duration: 10s, 5s;
+	animation-timing-function: linear, ease-in-out;
+	animation-iteration-count: infinite, infinite;
+	position: absolute;
+	top: -100px;
+	z-index: 7;
+	filter: blur(0.5px);
 }
 
-header h1 {
-    font-size: 3rem;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 20px #f1c40f;
-    animation: bounce 2s infinite;
+.snowflake1 { left: 500px; animation-delay: 1s, 1s; }
+.snowflake2 { left: 20px; animation-delay: 2s, 2s; }
+.snowflake3 { right: 170px; animation-delay: 3s, 5s; filter: blur(0.7px); }
+.snowflake4 { right: 430px; animation-delay: 4s, 4s; }
+.snowflake5 { left: 500px; animation-delay: 6s, 2s; font-size: 2rem; }
+.snowflake6 { left: 75px; animation-delay: 3.2s, 2s; font-size: 2rem; }
+.snowflake7 { left: 650px; animation-delay: 7.2s, 1s; }
+.snowflake8 { left: 820px; animation-delay: 4s, 2s; font-size: 2rem; }
+.snowflake9 { left: 170px; animation-delay: 5s, 2s; font-size: 2rem; filter: blur(0.3px); }
+.snowflake10 { left: 350px; animation-delay: 2.7s, 2s; font-size: 3rem; }
+.snowflake11 { right: 400px; animation-delay: 0.5s, 2s; font-size: 3rem; }
+.snowflake12 { left: 470px; animation-delay: 5s, 2s; filter: blur(0.9px); }
+.snowflake13 { right: 220px; animation-delay: 1s, 2s; filter: blur(0.6px); }
+.snowflake14 { right: 140px; animation-delay: 2s, 2s; filter: blur(0.5px); }
+
+/* Mountain Styling */
+.mountains {
+	width: 100%;
 }
 
-header .tagline {
-    font-size: 1.1rem;
-    color: #f7dc6f;
-    text-transform: uppercase;
-    margin-top: 0.5rem;
+.mt1, .mt2, .mt3, .mt4, .mt5, .mt6 {
+	position: absolute;
+	content: "";
+	bottom: 0;
 }
 
-/* Navigation Bar */
-nav {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+.mt1 {
+	left: 100px;
+	border-top: 0px solid transparent;
+	border-right: 150px solid transparent;
+	border-left: 150px solid transparent;
+	border-bottom: 300px solid #0b364f;
+	z-index: 3;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 1.5rem;
+.mt2 {
+	left: -20px;
+	border-top: 0px solid transparent;
+	border-right: 150px solid transparent;
+	border-left: 150px solid transparent;
+	border-bottom: 200px solid #094669;
+	z-index: 6;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #f7dc6f;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.mt3 {
+	left: 280px;
+	border-top: 0px solid transparent;
+	border-right: 150px solid transparent;
+	border-left: 150px solid transparent;
+	border-bottom: 175px solid #094669;
+	z-index: 6;
 }
 
-nav ul li a:hover {
-    color: #e74c3c;
-    text-shadow: 0 0 10px #e74c3c;
+/* Add similar styles for mt4, mt5, mt6 */
+
+/* Snow Peak Styling */
+.snow-peak-1a, .snow-peak-1b, .snow-peak-2a, .snow-peak-2b, .snow-peak-3a, 
+.snow-peak-3b, .snow-peak-3c, .snow-peak-3d, .snow-peak-4a, .snow-peak-4b {
+	position: absolute;
+	content: "";
 }
 
-/* About Section */
-#about {
-    background: rgba(46, 204, 113, 0.9);
-    padding: 3rem 1rem;
-    border-radius: 10px;
-    margin-bottom: 3rem;
-    text-align: center;
+.snow-peak-1a {
+	bottom: -130px;
+	left: -45px;
+	border-top: 30px solid #c1cfd7;
+	border-right: 25px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 25px solid transparent;
 }
 
-#about h2 {
-    font-size: 2.2rem;
-    color: #fff;
-    margin-bottom: 1rem;
+/* Add other snow-peak definitions */
+
+/* Keyframes */
+@keyframes up {
+	0% { transform: translateY(0%); }
+	50% { transform: translateY(100px); }
+	100% { transform: translateY(0); }
 }
 
-#about p {
-    font-size: 1rem;
-    color: #ecf0f1;
-    line-height: 1.8;
+@keyframes across {
+	from { right: 0%; }
+	to { right: 100%; }
 }
 
-/* Projects Section */
-#projects {
-    background: linear-gradient(135deg, #3498db, #6dd5ed);
-    padding: 3rem 1rem;
-    border-radius: 10px;
-    margin-bottom: 3rem;
-    text-align: center;
+@keyframes fall {
+	0% { top: -10%; }
+	100% { top: 100%; }
 }
 
-#projects h2 {
-    font-size: 2.2rem;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-#projects ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0;
-}
-
-#projects ul li {
-    padding: 1rem;
-    background: #ff6b6b;
-    border-radius: 8px;
-    color: #fff;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-#projects ul li:hover {
-    background: #f39c12;
-    transform: translateY(-5px);
-}
-
-/* Contact Section */
-#contact {
-    background: #34495e;
-    padding: 3rem 1rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2.2rem;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-#contact p {
-    font-size: 1rem;
-    color: #ecf0f1;
-    line-height: 1.6;
-}
-
-/* Footer */
-footer {
-    background: #162447;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    margin-top: 3rem;
-    border-top: 2px solid #e74c3c;
-}
-
-footer p {
-    font-size: 0.9rem;
-    color: #f7dc6f;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    #projects ul li, #about {
-        width: 100%;
-    }
+@keyframes shake {
+	0% { transform: translatex(0); }
+	50% { transform: translatex(50px); }
+	100% { transform: translatex(0); }
 }

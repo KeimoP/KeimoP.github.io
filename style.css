@@ -22,7 +22,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://i.imgur.com/OdfF8Vj.png') repeat;
+    background: url('https://media.lordicon.com/icons/wired/flat/815-snow-flake.svg') repeat;
     opacity: 0.2;
     z-index: -1;
     animation: snow 10s linear infinite;
@@ -56,16 +56,6 @@ header {
     overflow: hidden;
 }
 
-header::after {
-    content: '🎄 🎅 🎁 ❄️';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    opacity: 0.2;
-}
-
 header h1 {
     font-size: 3.5rem;
     font-family: 'Poppins', sans-serif;
@@ -95,7 +85,7 @@ header .tagline {
 
 /* Navigation Bar */
 nav {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     padding: 1.5rem 0;
     text-align: center;
     position: relative;
@@ -130,10 +120,10 @@ nav ul li a:hover {
 
 /* About Section */
 #about {
-    background: rgba(46, 204, 113, 0.8); /* Festive green with opacity */
+    background: #ff934f(46, 204, 113, 0.8); /* Festive green with opacity */
     padding: 4rem 0;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Lightened box shadow */
+    box-shadow: 0 4px 15px #864d2a(0, 0, 0, 0.3); /* Lightened box shadow */
     margin-bottom: 4rem;
     animation: slideInLeft 1s ease-out; /* Slide in from left */
 }
@@ -157,7 +147,7 @@ nav ul li a:hover {
 
 /* Projects Section */
 #projects {
-    background: linear-gradient(135deg, #3498db, #6dd5ed); /* Icy blue gradient */
+    background: linear-gradient(135deg, #ff934f, #fdae7c); /* Icy blue gradient */
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -193,13 +183,6 @@ nav ul li a:hover {
     position: relative;
 }
 
-#projects ul li::before {
-    content: '🎁';
-    position: absolute;
-    left: -30px;
-    font-size: 1.5rem;
-}
-
 #projects ul li:hover {
     background: #f39c12; /* Gold hover effect */
     transform: translateY(-5px);
@@ -215,15 +198,6 @@ nav ul li a:hover {
     animation: slideInUp 1s ease-out; /* Slide up animation */
     position: relative;
     overflow: hidden;
-}
-
-#contact::before {
-    content: '🎅🎄❄️';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    opacity: 0.5;
 }
 
 #contact h2 {

@@ -8,10 +8,33 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1b1b2f, #162447); /* Festive dark gradient */
+    background: linear-gradient(135deg, #1e3a5f, #162447); /* Festive dark gradient */
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Add snowflake animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/OdfF8Vj.png') repeat;
+    opacity: 0.2;
+    z-index: -1;
+    animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100vw 100vh;
+    }
 }
 
 /* Utility Class for Containers */
@@ -24,11 +47,23 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #e74c3c, #d35400); /* Christmas red gradient */
+    background: linear-gradient(135deg, #ff4b5c, #ff934f); /* Christmas red to orange */
     color: #fff;
     text-align: center;
     padding: 4rem 0;
-    border-bottom: 3px solid #f39c12; /* Gold border for Christmas vibe */
+    border-bottom: 3px solid #f39c12; /* Gold border */
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '🎄 🎅 🎁 ❄️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.2;
 }
 
 header h1 {
@@ -38,6 +73,7 @@ header h1 {
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 30px #f1c40f; /* Golden glowing effect */
+    animation: bounce 2s infinite;
 }
 
 header .tagline {
@@ -48,13 +84,23 @@ header .tagline {
     margin-top: 0.5rem;
 }
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 /* Navigation Bar */
 nav {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.7);
     padding: 1.5rem 0;
     text-align: center;
     position: relative;
     z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -84,7 +130,7 @@ nav ul li a:hover {
 
 /* About Section */
 #about {
-    background: #2ecc71; /* Festive green */
+    background: rgba(46, 204, 113, 0.8); /* Festive green with opacity */
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Lightened box shadow */
@@ -111,7 +157,7 @@ nav ul li a:hover {
 
 /* Projects Section */
 #projects {
-    background: linear-gradient(135deg, #3498db, #2980b9); /* Icy blue gradient */
+    background: linear-gradient(135deg, #3498db, #6dd5ed); /* Icy blue gradient */
     padding: 4rem 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -137,19 +183,21 @@ nav ul li a:hover {
 
 #projects ul li {
     padding: 1rem 2rem;
-    background: #e74c3c; /* Festive red */
+    background: #ff6b6b; /* Festive red */
     border-radius: 10px;
     text-align: center;
     font-size: 1.1rem;
     color: #fff;
     width: 60%;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-#projects ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+#projects ul li::before {
+    content: '🎁';
+    position: absolute;
+    left: -30px;
+    font-size: 1.5rem;
 }
 
 #projects ul li:hover {
@@ -165,6 +213,17 @@ nav ul li a:hover {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     animation: slideInUp 1s ease-out; /* Slide up animation */
+    position: relative;
+    overflow: hidden;
+}
+
+#contact::before {
+    content: '🎅🎄❄️';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.5;
 }
 
 #contact h2 {
@@ -205,4 +264,38 @@ footer {
 footer p {
     font-size: 1rem;
     color: #f7dc6f;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

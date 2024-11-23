@@ -12,6 +12,9 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Snowfall animation */
@@ -76,6 +79,9 @@ header {
     border-bottom: 3px solid #f39c12; /* Gold border */
     position: relative;
     overflow: hidden;
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 header h1 {
@@ -152,6 +158,9 @@ nav ul li a:hover {
     box-shadow: 0 4px 15px #864d2a(0, 0, 0, 0.3); /* Lightened box shadow */
     margin-bottom: 5rem;
     animation: slideInLeft 1s ease-out; /* Slide in from left */
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 #about h2 {
@@ -182,6 +191,9 @@ nav ul li a:hover {
     animation: slideInRight 1s ease-out; /* Slide in from right */
     margin-left: 5rem;
     margin-right: 5rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 #projects h2 {
@@ -229,6 +241,9 @@ nav ul li a:hover {
     overflow: hidden;
     margin-left: 5rem;
     margin-right: 5rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 #contact h2 {

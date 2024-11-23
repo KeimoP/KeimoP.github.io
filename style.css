@@ -141,6 +141,7 @@ nav ul li a:hover::after {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.15); /* Soft outer shadow */
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 /* Stylish inner animation */

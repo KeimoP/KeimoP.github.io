@@ -58,6 +58,7 @@ header {
 
 header h1 {
     font-size: 3.5rem;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -143,6 +144,7 @@ nav ul li a:hover {
 
 #about p {
     font-size: 1.2rem;
+    text-align: center;
     color: #ecf0f1;
     text-align: center;
     line-height: 1.8;

@@ -244,6 +244,11 @@ p:hover {
     overflow: hidden;
 }
 
+.blog-image img {
+    width: auto;
+    object-fit: cover;
+}
+
 .blog-content {
     padding: 1rem;
 }

@@ -29,11 +29,17 @@
                     <input type="email" id="email" name="email" required>
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
+                    <!-- Google reCAPTCHA widget -->
+                    <div class="g-recaptcha" data-sitekey="6LcT54gqAAAAAPAr_eeqETwWHJklRwRrCcI80emd"></div>
+
                     <button type="submit" class="btn">Send</button>
                 </form>
             </div>
         </section>
     </main>
+
+    <!-- Include the reCAPTCHA API script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         // Generate snowflakes
         const numSnowflakes = 50; // Adjust the number of snowflakes

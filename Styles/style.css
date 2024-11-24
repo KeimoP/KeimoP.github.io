@@ -188,24 +188,11 @@ nav ul li a:hover::after {
 section h2 {
     font-size: 2.5rem;
     font-family: 'Poppins', sans-serif;
-    color: #00d4ff;
+    color: #ebebeb;
     text-transform: uppercase;
     margin-top: -0.5rem;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 10px #00d4ff, 0 0 20px rgba(0, 212, 255, 0.6);
-    animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0% {
-        text-shadow: 0 0 10px #00d4ff, 0 0 20px rgba(0, 212, 255, 0.6);
-    }
-    50% {
-        text-shadow: 0 0 15px #00ff85, 0 0 30px rgba(0, 255, 133, 0.8);
-    }
-    100% {
-        text-shadow: 0 0 10px #00d4ff, 0 0 20px rgba(0, 212, 255, 0.6);
-    }
+    text-shadow: 0 0 10px #424546, 0 0 20px rgba(22, 26, 27, 0.6);
 }
 
 /* Paragraph Text */
@@ -287,6 +274,96 @@ p:hover {
 .blog-content .read-more:hover {
     text-decoration: underline;
 }
+/* Contact Form Section */
+#contact-form {
+    padding: 2rem 0;
+    background: #f8f9fa; /* Light gray background */
+    border-top: 2px solid #007BFF; /* Accent divider */
+    border-bottom: 2px solid #007BFF;
+}
+
+#contact-form .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#contact-form h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Form Styles */
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form label {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+    color: #555;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focused input styles */
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Button Styles */
+#contact-form .btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#contact-form .btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #contact-form .container {
+        padding: 0.5rem;
+    }
+
+    #contact-form h2 {
+        font-size: 1.8rem;
+    }
+
+    #contact-form .btn {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+}
 
 /* Footer Styles */
 footer {
@@ -317,9 +394,9 @@ button, .btn {
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
-    background: linear-gradient(135deg, #00d4ff, #00ff85);
+    background: linear-gradient(135deg, #1e3740, #3f4344);
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
@@ -327,25 +404,8 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background: linear-gradient(135deg, #00ff85, #00d4ff);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
-}
-
-button::after, .btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: -1;
-    transition: all 0.4s ease-in-out;
-}
-
-button:hover::after, .btn:hover::after {
-    left: 0;
 }
 
 /* Responsive Adjustments */

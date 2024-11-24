@@ -100,6 +100,7 @@ nav {
     top: 0;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
 }
 
 nav ul {
@@ -325,7 +326,7 @@ p:hover {
 
 /* Button Styles */
 #contact-form .btn {
-    background: #c2c2c2;
+    background: #b7dbdf;
     color: rgb(82, 74, 74);
     border: none;
     padding: 0.8rem;
@@ -335,11 +336,6 @@ p:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#contact-form .btn:hover {
-    background: #858585;
-    transform: scale(1.05);
 }
 
 /* Responsive Adjustments */

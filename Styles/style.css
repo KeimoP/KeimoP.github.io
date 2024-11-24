@@ -242,7 +242,6 @@ p:hover {
     border-radius: 5px;
     margin-bottom: 1.5rem;
     overflow: hidden;
-    background: #fff;
 }
 
 .blog-image img {
@@ -258,7 +257,6 @@ p:hover {
 .blog-content h3 {
     margin-top: 0;
     font-size: 1.8rem;
-    color: #007BFF;
 }
 
 .blog-content p {
@@ -266,15 +264,6 @@ p:hover {
     margin: 1rem 0;
 }
 
-.blog-content .read-more {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.blog-content .read-more:hover {
-    text-decoration: underline;
-}
 /* Contact Form Section */
 #contact-form .container {
     max-width: 600px;

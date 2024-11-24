@@ -150,59 +150,48 @@ nav ul li a:hover::after {
 
 
 
-/* Animated Links in Projects Section */
+/* Projects Section - Align images and text */
 #projects ul li {
+    display: flex;
+    align-items: center; /* Vertically align image and text */
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient for a sleek effect */
+    background: linear-gradient(135deg, #007bff, #00c6ff);
     border-radius: 15px;
-    text-align: center;
-    font-size: 1.1rem;
     color: #fff;
     width: 60%;
-    transition: all 0.4s ease, transform 0.3s ease; /* Smooth transitions */
+    margin: 1rem auto;
+    transition: all 0.4s ease, transform 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.15); /* Soft outer shadow */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.15);
     cursor: pointer;
-    margin-bottom: 2rem;
 }
 
-/* Stylish inner animation */
-#projects ul li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15); /* Soft white streak */
-    transform: skewX(-45deg);
-    transition: left 0.5s ease;
-    z-index: 0;
-    pointer-events: none;
+/* Image inside project list */
+#projects ul li img {
+    width: 40px; /* Adjust size of images */
+    height: 40px;
+    margin-right: 1rem; /* Space between image and text */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: transform 0.3s ease;
 }
 
-#projects ul li:hover::before {
-    left: 100%; /* Sweep animation */
+/* On hover, slightly enlarge the image */
+#projects ul li:hover img {
+    transform: scale(1.1);
 }
 
-/* Link styling inside the buttons */
+/* Text styling */
 #projects ul li a {
-    position: relative;
+    display: flex;
+    align-items: center;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: 0.5px;
-    z-index: 1; /* Above inner animation */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Soft depth for the text */
+    z-index: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
-#projects ul li a:hover {
-    color: #cce7ff; /* Lightened text */
-    text-shadow: 0 2px 5px rgba(0, 123, 255, 0.4); /* Subtle glow */
-}
-
 
 /* Text Headers with Animation */
 section h2 {

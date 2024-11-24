@@ -25,25 +25,25 @@
                 <ul>
                     <li>
                         <a href="https://github.com/keimop/python" target="_blank">
-                            <img src="pictures/python.png" alt="Python Logo">
+                            <img src="pictures/projectlogos/python.png" alt="Python Logo">
                             Python Github
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/KeimoP/KeimoP.github.io" target="_blank">
-                            <img src="pictures/github.png" alt="Project Logo">
+                            <img src="pictures/projectlogos/website.png" alt="Project Logo">
                             Website Github
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/KeimoP/azure-app" target="_blank">
-                            <img src="pictures/azureapp.png" alt="Azure Logo">
+                            <img src="pictures/projectlogos/github.png" alt="Azure Logo">
                             Azure App Github
                         </a>
                     </li>
                     <li>
                         <a href="https://app.keimohub.live/" target="_blank">
-                            <img src="pictures/website.png" alt="App Logo">
+                            <img src="pictures/projectlogos/azureapp.png" alt="App Logo">
                             Azure App Website
                         </a>
                     </li>
@@ -57,5 +57,20 @@
             <p>&copy; 2024 keimohub, Inc</p>
         </div>
     </footer>
+    <script>
+        // Generate snowflakes
+        const numSnowflakes = 50; // Adjust the number of snowflakes
+        const body = document.body;
+
+        for (let i = 0; i < numSnowflakes; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDelay = `${Math.random() * 10}s`;
+            snowflake.style.animationDuration = `${10 + Math.random() * 10}s`;
+            snowflake.style.opacity = `${0.3 + Math.random() * 0.7}`;
+            body.appendChild(snowflake);
+        }
+    </script>
 </body>
 </html>

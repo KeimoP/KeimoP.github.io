@@ -240,7 +240,7 @@ p:hover {
     flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 7rem;
     overflow: hidden;
 }
 
@@ -352,16 +352,22 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Footer Links */
-footer a {
-    color: #00d4ff;
+/* Footer styling */
+footer {
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    background: #333;
+    padding: 1rem 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
 }
 
-footer a:hover {
-    color: #00ff85;
-    text-shadow: 0 0 10px #00ff85, 0 0 20px rgba(0, 255, 133, 0.6);
+footer .container {
+    max-width: 1200px; /* Optional max width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center; /* Vertically centers the text */
 }
 
 /* Dynamic Buttons (Optional for Links Styled as Buttons) */

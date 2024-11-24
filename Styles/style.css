@@ -245,7 +245,7 @@ p:hover {
 }
 
 .blog-image img {
-    width: auto;
+    height: auto;
     object-fit: cover;
 }
 

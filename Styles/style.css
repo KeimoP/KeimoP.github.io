@@ -91,7 +91,7 @@ a::before {
     left: 0;
     width: 0%;
     height: 2px;
-    background: #00ff85; /* Neon green underline */
+    background: #ffffff; /* Neon green underline */
     transition: width 0.4s ease-in-out;
 }
 /* Animated Header */
@@ -156,8 +156,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00ff85;
-    text-shadow: 0 0 10px #00ff85, 0 0 20px rgba(0, 255, 133, 0.6);
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(0, 255, 133, 0.6);
 }
 
 nav ul li a::after {
@@ -165,7 +165,7 @@ nav ul li a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #00ff85;
+    background: #ffffff;
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease-in-out;
@@ -247,7 +247,7 @@ p:hover {
 /* Special Links in Contact Section */
 #contact a {
     font-size: 1.2rem;
-    color: #00ff85;
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     font-weight: bold;

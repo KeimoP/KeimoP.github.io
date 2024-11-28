@@ -22,16 +22,18 @@
         <section id="contact-form">
             <div class="container">
                 <h2>Contact Me - Broken</h2>
-                <form action="mailto:keimo@hkhk.edu.ee" method="post" enctype="text/plain">
+                <form action="mailto:keimo.plaas22@gmail.com" method="post" enctype="text/plain">
                     <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    
                     <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
-                    <!-- Google reCAPTCHA widget -->
+                    
                     <div class="g-recaptcha" data-sitekey="6LcT54gqAAAAAPAr_eeqETwWHJklRwRrCcI80emd"></div>
-
+                    
                     <button type="submit" class="btn">Send</button>
                 </form>
             </div>

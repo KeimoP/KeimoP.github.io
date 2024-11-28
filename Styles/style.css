@@ -206,8 +206,7 @@ p {
 }
 
 p:hover {
-    color: #00d4ff;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 /* Special Links in Contact Section */

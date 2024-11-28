@@ -222,7 +222,7 @@ nav {
     border-radius: 15px;
     color: #fff;
     width: 60%;
-    margin: 1rem auto;
+    margin-bottom: 1rem;
     transition: all 0.4s ease, transform 0.3s ease;
     position: relative;
     overflow: hidden;

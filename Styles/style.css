@@ -127,11 +127,12 @@ header .tagline {
 /* Navigation Bar */
 nav {
     position: relative;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px); /* Modern glass effect */
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(10px); /* Modern glass effect */
     padding: 1rem;
     text-align: center;
     z-index: 10;
+    border-radius: 50px;   
 }
 
 /* Hamburger Menu */
@@ -424,11 +425,11 @@ footer {
 /* Footer styling */
 footer {
     text-decoration: none;
-    background: #333;
+    background: rgba(50,50,50, 0.7);
     padding: 1rem 2rem;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for styling */
 }
 
 footer .container {

@@ -1,17 +1,26 @@
+</html>
 <!DOCTYPE html>
 <html lang="et">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keimo Main Website</title>
+    <title>Keimo's Main Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 
 <body>
     <nav>
-        <ul>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -54,7 +63,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Snowfall -->
+    <!-- JavaScript -->
+    <script src="nav.js"></script>
+    
+        <!-- JavaScript for Snowfall -->
     <script>
         // Generate snowflakes
         const numSnowflakes = 50; // Adjust the number of snowflakes

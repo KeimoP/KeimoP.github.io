@@ -65,7 +65,6 @@ body {
     animation-delay: calc(-0.5s * var(--i));
 }
 
-
 /* Utility Class for Containers */
 .container {
     width: 90%;
@@ -91,7 +90,7 @@ a::before {
     left: 0;
     width: 0%;
     height: 2px;
-    background: #ffffff; /* Neon green underline */
+    background: #00ff85; /* Neon green underline */
     transition: width 0.4s ease-in-out;
 }
 /* Animated Header */
@@ -127,55 +126,92 @@ header .tagline {
 
 /* Navigation Bar */
 nav {
+    position: relative;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px); /* Modern glass effect */
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
-    position: sticky;
-    top: 0;
     z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 3rem;
 }
 
-nav ul {
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 15;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Active State */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Navigation Links */
+#nav-links {
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 2rem;
+    margin-top: 1rem;
 }
 
-nav ul li a {
+#nav-links li {
+    display: inline-block;
+}
+
+#nav-links a {
     text-decoration: none;
     color: #00d4ff;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
-    position: relative;
 }
 
-nav ul li a:hover {
+#nav-links a:hover {
     color: #ffffff;
     text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(0, 255, 133, 0.6);
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #ffffff;
-    left: 0;
-    bottom: -5px;
-    transition: width 0.3s ease-in-out;
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px; /* Adjust based on your nav height */
+        left: 0;
+        right: 0;
+        padding: 1rem;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
 }
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-
 
 /* Projects Section - Align images and text */
 #projects ul li {
@@ -247,7 +283,7 @@ p:hover {
 /* Special Links in Contact Section */
 #contact a {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #00ff85;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     font-weight: bold;

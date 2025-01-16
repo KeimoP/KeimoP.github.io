@@ -128,11 +128,52 @@ header .tagline {
 nav {
     position: relative;
     background: rgba(255,255,255, 0.1);
-    backdrop-filter: blur(10px); /* Modern glass effect */
     padding: 1rem;
     text-align: center;
+    z-index: 5;
+    border-radius: 10px;   
+}
+
+/* Left-Side Navigation Bar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60px; /* Narrow width for icons */
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem 0;
     z-index: 10;
-    border-radius: 50px;   
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Icons */
+.nav a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 1rem 0;
+    color: #00d4ff; /* Neon blue for icons */
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%; /* Circle effect for icons */
+    transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.1); /* Highlight effect */
+    color: #ffffff; /* White icon on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Active Link */
+.nav a.active {
+    color: #000; /* Black for contrast */
 }
 
 /* Hamburger Menu */

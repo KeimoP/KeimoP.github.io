@@ -1,68 +1,121 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Futuristic dark gradient */
-    color: #e0e0e0; /* Soft white for readability */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
 }
 
-/* Snowflake styling */
+/* Navigation Sidebar */
+nav {
+    position: relative;
+    width: 100%;
+    background: #2c3e50;
+    padding: 0.01rem 0;
+    display: flex;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Navigation Links */
+nav a {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: #34495e;
+    color: #ffffff;
+}
+
+/* Active Link Styling */
+nav a.active {
+    background: #16a085;
+    color: #fff;
+}
+
+/* Header Adjustments */
+header {
+    margin-left: 100px; /* Offset for sidebar */
+    padding: 2rem;
+    background: #1abc9c;
+    text-align: left;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #f2f2f2;
+}
+
+
+/* Blocky Buttons */
+button, .btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background: #131b20;
+    border: none;
+    border-radius: 0; /* Removed rounding */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    background: #34495e;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+/* Snowflake Styling */
 .snowflake {
-    position: fixed;
-    top: -50px; /* Start above the viewport */
-    width: 20px;
-    height: 20px;
-    background: url('https://media.lordicon.com/icons/wired/flat/815-snow-flake.svg') no-repeat center center;
-    background-size: contain;
-    pointer-events: none; /* Prevent interaction with snowflakes */
-    animation: fall linear infinite;
-    z-index: -1;
+    display: none; /* Removed for professional look */
 }
 
-/* Snowflake styling */
-.snowflake {
-    position: fixed;
-    top: -50px; /* Start above the viewport */
-    width: 20px;
-    height: 20px;
-    background: url('https://media.lordicon.com/icons/wired/flat/815-snow-flake.svg') no-repeat center center;
-    background-size: contain;
-    pointer-events: none; /* Prevent interaction with snowflakes */
-    animation: fall linear infinite;
-    z-index: -1;
-    opacity: 0.8; /* Slight transparency for realism */
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        box-shadow: none;
+    }
 
-/* Snowflake falling animation with angle */
-@keyframes fall {
-    0% {
-        transform: translateX(0) translateY(0) rotate(0deg);
+    nav a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
     }
-    25% {
-        transform: translateX(20px) translateY(25vh) rotate(90deg);
-    }
-    50% {
-        transform: translateX(-30px) translateY(50vh) rotate(180deg);
-    }
-    75% {
-        transform: translateX(40px) translateY(75vh) rotate(270deg);
-    }
-    100% {
-        transform: translateX(-20px) translateY(110vh) rotate(360deg);
-    }
-}
 
-/* Add slight randomness to each snowflake */
-.snowflake:nth-child(odd) {
-    animation-duration: 7s; /* Slightly slower animation */
-    animation-delay: calc(-1s * var(--i));
-}
-
-.snowflake:nth-child(even) {
-    animation-duration: 5s; /* Slightly faster animation */
-    animation-delay: calc(-0.5s * var(--i));
+    header, .container, footer {
+        margin-left: 0;
+    }
 }
 
 /* Utility Class for Containers */
@@ -93,25 +146,6 @@ a::before {
     background: #00ff85; /* Neon green underline */
     transition: width 0.4s ease-in-out;
 }
-/* Animated Header */
-header {
-    background: linear-gradient(135deg, #2c5364, #0f2027); /* Dark IT theme */
-    text-align: center;
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
-
-header .tagline {
-    font-size: 1.4rem;
-    color: #f2f2f2;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: fadeIn 2s ease-in;
-}
 
 @keyframes fadeIn {
     from {
@@ -122,58 +156,6 @@ header .tagline {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Navigation Bar */
-nav {
-    position: relative;
-    background: rgba(255,255,255, 0.1);
-    padding: 1rem;
-    text-align: center;
-    z-index: 5;
-    border-radius: 10px;   
-}
-
-/* Left-Side Navigation Bar */
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 60px; /* Narrow width for icons */
-    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 1rem 0;
-    z-index: 10;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Navigation Icons */
-.nav a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 1rem 0;
-    color: #00d4ff; /* Neon blue for icons */
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%; /* Circle effect for icons */
-    transition: all 0.3s ease-in-out;
-}
-
-.nav a:hover {
-    background: rgba(255, 255, 255, 0.1); /* Highlight effect */
-    color: #ffffff; /* White icon on hover */
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* Active Link */
-.nav a.active {
-    color: #000; /* Black for contrast */
 }
 
 /* Hamburger Menu */
@@ -451,56 +433,6 @@ p:hover {
         font-size: 1rem;
         padding: 0.7rem;
     }
-}
-
-/* Footer Styles */
-footer {
-    margin-top: 3rem;
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: white;
-    font-size: 0.9rem;
-}
-
-/* Footer styling */
-footer {
-    text-decoration: none;
-    background: rgba(50,50,50, 0.7);
-    padding: 1rem 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for styling */
-}
-
-footer .container {
-    max-width: 1200px; /* Optional max width */
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-start; /* Align text to the left */
-    align-items: center; /* Vertically centers the text */
-}
-
-/* Dynamic Buttons (Optional for Links Styled as Buttons) */
-button, .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(135deg, #1e3740, #3f4344);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    position: relative;
-}
-
-button:hover, .btn:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);
 }
 
 /* Responsive Adjustments */

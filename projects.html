@@ -1,53 +1,86 @@
+
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Projects | Keimo's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Styles/style.css">
 </head>
-<body>    
-    <nav>
-        <!-- Hamburger Icon -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">Keimo's Hub</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
         </div>
-
-        <!-- Navigation Links -->
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
     </nav>
 
+    <header class="page-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A collection of my work and ongoing projects</p>
+        </div>
+    </header>
+
     <main>
-        <section id="projects">
+        <section id="projects" class="section">
             <div class="container">
-                <h2>Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <ul>
                     <li>
                         <a href="https://github.com/keimop/python" target="_blank">
                             <img src="pictures/projectlogos/python.png" alt="Python Logo">
-                            Python Github
+                            <div>
+                                <h3>Python Projects</h3>
+                                <p>Collection of Python code and applications</p>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/KeimoP/KeimoP.github.io" target="_blank">
                             <img src="pictures/projectlogos/website.png" alt="Project Logo">
-                            Website Github
+                            <div>
+                                <h3>Personal Website</h3>
+                                <p>The source code for this portfolio website</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
     </main>
-    <!-- JavaScript -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Keimo's Hub</h3>
+                    <p>Sharing my journey in tech and programming</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/KeimoP" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:keimo.plaas22@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 keimohub, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="nav.js"></script>
 </body>
 </html>

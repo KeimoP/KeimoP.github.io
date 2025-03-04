@@ -1,56 +1,108 @@
+
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Contact | Keimo's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body>
-    <nav>
-        <!-- Hamburger Icon -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">Keimo's Hub</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
         </div>
-
-        <!-- Navigation Links -->
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
     </nav>
 
+    <header class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>I'd love to hear from you</p>
+        </div>
+    </header>
+
     <main>
-        <section id="contact-form">
+        <section id="contact-form" class="section">
             <div class="container">
-                <h2>Contact Me - Broken</h2>
-                <form action="https://keimo.plaas22@gmail.com" method="POST">
-                    <input type="hidden" name="access_key" value="6219af4d-a5e9-46a0-b1d8-d76eadfca246">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" placeholder="Your Message" name="message" rows="5" class="contact-inputs" required></textarea>
-                    <div class="g-recaptcha" data-sitekey="6LcT54gqAAAAAPAr_eeqETwWHJklRwRrCcI80emd"></div>
-                    <button type="submit" class="btn">submit</button>
-                </form>
+                <h2 class="section-title">Contact Me</h2>
+                
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>keimo.plaas22@gmail.com</p>
+                        <a href="mailto:keimo.plaas22@gmail.com" class="btn btn-primary">Send Email</a>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Check out my code</p>
+                        <a href="https://github.com/KeimoP" target="_blank" class="btn btn-primary">Visit GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Or send a message directly</h3>
+                    <form id="contact-form" action="https://formspree.io/f/keimo.plaas22@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    
+                    <div class="form-note">
+                        <p>Note: You can also reach me directly at keimo.plaas22@gmail.com</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <main>
-        <h2>Just send me a main to keimo.plaas22@gmail.com</h2>
-    </main>
-    <!-- JavaScript -->
-    <script src="nav.js"></script>
 
-    <!-- Include the reCAPTCHA API script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Keimo's Hub</h3>
+                    <p>Sharing my journey in tech and programming</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/KeimoP" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:keimo.plaas22@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 keimohub, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
 </body>
 </html>

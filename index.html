@@ -1,83 +1,110 @@
-<!DOCTYPE html>
-<html lang="et">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keimo's Main Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(to bottom, #0044cc, #66b3ff);
-            color: white;
-        }
-        .bg-dark {
-            background-color: #003399 !important;
-        }
-        .btn-primary {
-            background-color: #0055cc;
-            border-color: #0044cc;
-        }
-        .btn-secondary {
-            background-color: #3399ff;
-            border-color: #66b3ff;
-        }
-        .bg-light {
-            background: #66b3ff;
-            color: #003366;
-        }
-    </style>
+    <title>Keimo's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/style.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Keimo's Hub</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">Keimo's Hub</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <main class="container my-5">
-        <section id="about" class="text-center py-5 bg-light rounded">
-            <h2>Welcome to Keimo's Hub</h2>
-            <p>I'm an aspiring IT student passionate about coding, learning, and innovation.</p>
-            <a href="projects.html" class="btn btn-primary">Explore My Projects</a>
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to <span>Keimo's Hub</span></h1>
+            <p>IT Student • Developer • Tech Enthusiast</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn btn-primary">My Projects</a>
+                <a href="blog.html" class="btn btn-secondary">Read Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Building applications and learning advanced concepts</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                        <p>Object-oriented programming and applications</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS and responsive design</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Tools</h3>
+                        <p>Git, GitHub, VSCode, Intellij</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="skills" class="text-center py-5">
-            <h2>Learning</h2>
-            <ul class="list-group list-group-flush d-inline-block text-start">
-                <li class="list-group-item">Learning Programming Languages: Python, Java</li>
-                <li class="list-group-item">Web Development: HTML, CSS</li>
-                <li class="list-group-item">Learning Tools: Git, GitHub, VSCode, Intellij</li>
-                <li class="list-group-item">Cloud: Azure</li>
-            </ul>
-        </section>
-
-        <section id="blog" class="text-center py-5 bg-light rounded">
-            <h2>Latest Blogs</h2>
-            <p>Sharing my experiences, projects, and what I'm learning in IT!</p>
-            <a href="blog.html" class="btn btn-secondary">View Blogs</a>
+        <section id="latest-blog" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Latest from the Blog</h2>
+                <div class="blog-preview">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="pictures/blog/pic1.jpg" alt="First soldering project">
+                        </div>
+                        <div class="blog-content">
+                            <h3>First soldering</h3>
+                            <p>I cut two different LED strips and soldered them together to create a longer one. As you can see, it wasn't the best job, but it works.</p>
+                            <a href="blog.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 keimohub, Inc</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Keimo's Hub</h3>
+                    <p>Sharing my journey in tech and programming</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/KeimoP" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:keimo.plaas22@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 keimohub, Inc. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="nav.js"></script>
 </body>
-
 </html>

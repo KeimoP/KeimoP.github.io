@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Keimo</title>
+  <style>
+    :root {
+      --primary: #0066cc;
+      --background: #f4f4f7;
+      --text: #222;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #004c99;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: var(--card-bg);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: var(--card-bg);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../">Home</a>
+  <a href="./">About</a>
+  <a href="../index.html#projects">Projects</a>
+  <a href="../index.html#contact">Contact</a>
+</nav>
+
+<header>
+  <div class="hero-container">
+    <h1>ℹ️ About Me</h1>
+    <p class="hero-subtitle">IT Student • Hardware Enthusiast • Builder</p>
+  </div>
+</header>
+
+<section>
+  <h2>Who I Am</h2>
+  <p class="hero-desc">
+    🛠️ I work hands-on with real hardware — from configuring <strong>servers, switches, and routers</strong> to building systems with <strong>Arduino</strong>.<br><br>
+    I've deployed and managed systems using <strong>Windows Server</strong>, <strong>Debian</strong>, and <strong>Proxmox</strong> in personal and lab setups.<br><br>
+    💻 While I also build websites, I keep it simple — working with <strong>pure HTML, CSS, and JavaScript</strong> to create practical, no-framework interfaces.
+  </p>
+</section>
+
+<footer>
+  <small>© 2025 Keimo — Student at Haapsalu Kutsehariduskeskus</small>
+</footer>
+
+<script>
+  const section = document.querySelector('section');
+  window.addEventListener('load', () => {
+    section.classList.add('visible');
+  });
+</script>
+
+</body>
+</html>

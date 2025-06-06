@@ -11,11 +11,11 @@
             --primary: #2c3e50;
             --secondary: #3498db;
             --accent: #1abc9c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --gray: #95a5a6;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
             --white: #ffffff;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
         }
 
@@ -76,7 +76,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
@@ -146,7 +146,7 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(236, 240, 241, 0.9) 0%, rgba(236, 240, 241, 0.7) 100%), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(248, 249, 250, 0.85) 100%), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
             position: relative;
             overflow: hidden;
         }
@@ -193,11 +193,22 @@
             animation: fadeInUp 1s forwards 1.1s;
         }
 
-        .btn:hover {
+        .btn-outline {
             background: transparent;
             color: var(--accent);
+        }
+
+        .btn:hover {
+            background: var(--primary);
+            color: var(--white);
             transform: translateY(-3px);
             box-shadow: var(--shadow);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: var(--white);
         }
 
         /* About Section */
@@ -379,6 +390,9 @@
             transition: var(--transition);
             opacity: 0;
             transform: translateY(30px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .project-card.animated {
@@ -394,6 +408,7 @@
         .project-image {
             height: 200px;
             overflow: hidden;
+            position: relative;
         }
 
         .project-image img {
@@ -409,6 +424,9 @@
 
         .project-content {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-content h3 {
@@ -418,6 +436,7 @@
         .project-content p {
             margin-bottom: 15px;
             color: var(--gray);
+            flex-grow: 1;
         }
 
         .tech-stack {
@@ -432,6 +451,121 @@
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Project Detail Page */
+        .project-detail {
+            padding: 120px 0 80px;
+        }
+
+        .project-detail-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .project-detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-detail-image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-detail-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-detail-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-detail-description {
+            margin-bottom: 40px;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            height: 200px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--accent);
         }
 
         /* Contact Section */
@@ -543,6 +677,10 @@
             .timeline-dot {
                 left: 30px;
             }
+
+            .project-detail-info {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -619,8 +757,8 @@
             <div class="hero-content">
                 <h1>Keimo Plaas</h1>
                 <h2>IT Student & Network Enthusiast</h2>
-                <p>Currently studying at Haapsalu Kutseharidus keskus. Passionate about networking, server configuration, and other kinds of development.</p>
-                <a href="#contact" class="btn">Get In Touch</a>
+                <p>Currently studying at Haapsalu Kutseharidus keskus. Passionate about networking, server configuration, and Python development.</p>
+                <a href="#projects" class="btn">View My Projects</a>
             </div>
         </div>
     </section>
@@ -634,7 +772,7 @@
                     <h3>IT Student with Hands-on Experience</h3>
                     <p>Hello! I'm Keimo, an IT student at Haapsalu Kutseharidus keskus. I'm passionate about networking, server administration, and Python development.</p>
                     <p>With hands-on experience in configuring routers, switches, and servers, I enjoy building and maintaining network infrastructure. I've worked with various networking equipment and have practical experience in setting up and troubleshooting networks.</p>
-                    <p>When I'm not racking servers or configuring network devices, I'm configuring personal servers, routers and switches</p>
+                    <p>When I'm not racking servers or configuring network devices, I'm developing Python applications or contributing to open-source projects on GitHub.</p>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Server Room">
@@ -653,7 +791,7 @@
                         <i class="fab fa-python"></i>
                     </div>
                     <h3>Python Development</h3>
-                    <p>Scripting, automation, and application development.</p>
+                    <p>Web development with Python frameworks, scripting, automation, and application development.</p>
                 </div>
                 
                 <div class="skill-card">
@@ -738,53 +876,8 @@
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Personal Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Home Network Setup">
-                    </div>
-                    <div class="project-content">
-                        <h3>Home Network Infrastructure</h3>
-                        <p>Designed and implemented a robust home network with multiple VLANs, firewall rules, and enterprise-grade equipment.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Cisco</span>
-                            <span class="tech">VLAN</span>
-                            <span class="tech">Firewall</span>
-                            <span class="tech">Routing</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1015&q=80" alt="Server Rack">
-                    </div>
-                    <div class="project-content">
-                        <h3>Personal Server Rack</h3>
-                        <p>Built and configured a personal server rack with multiple servers for various services including NAS, media server, and development environments.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Linux</span>
-                            <span class="tech">Docker</span>
-                            <span class="tech">RAID</span>
-                            <span class="tech">Virtualization</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Python Development">
-                    </div>
-                    <div class="project-content">
-                        <h3>Network Automation Tool</h3>
-                        <p>Developed a Python-based tool for automating network device configuration and monitoring.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Python</span>
-                            <span class="tech">Flask</span>
-                            <span class="tech">SNMP</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="projects-container" id="projects-container">
+                <!-- Projects will be dynamically loaded here -->
             </div>
         </div>
     </section>
@@ -848,28 +941,209 @@
         </div>
     </footer>
 
+    <!-- Project Detail Modal -->
+    <div class="modal" id="projectModal">
+        <div class="close-modal" id="closeModal">&times;</div>
+        <div class="modal-content" id="modalContent">
+            <!-- Project details will be loaded here -->
+        </div>
+    </div>
+
     <script>
-        // Navigation toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        // Project data
+        const projects = [
+            {
+                id: 1,
+                title: "Home Network Infrastructure",
+                shortDesc: "Designed and implemented a robust home network with multiple VLANs, firewall rules, and enterprise-grade equipment.",
+                longDesc: "This project involved setting up a complete home network infrastructure using enterprise-grade networking equipment. I implemented multiple VLANs to segregate traffic for security and performance. The firewall was configured with custom rules to protect the network from external threats while allowing necessary services. I also set up QoS policies to prioritize critical traffic and ensure smooth performance for streaming and gaming.",
+                imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+                technologies: ["Cisco", "VLAN", "Firewall", "Routing", "QoS"],
+                gallery: [
+                    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+                    "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                    "https://images.unsplash.com/photo-1593692909680-61b48e7a59b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
+                ],
+                date: "2022 - Present"
+            },
+            {
+                id: 2,
+                title: "Personal Server Rack",
+                shortDesc: "Built and configured a personal server rack with multiple servers for various services.",
+                longDesc: "This project involved building a personal server rack from the ground up. I selected and installed enterprise-grade servers, configured RAID arrays for data redundancy, and implemented virtualization using Proxmox. The rack hosts various services including a NAS for network storage, a media server for streaming content, development environments for coding projects, and a home automation system. I also implemented monitoring solutions to keep track of server health and performance.",
+                imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1015&q=80",
+                technologies: ["Linux", "Docker", "RAID", "Virtualization", "Proxmox"],
+                gallery: [
+                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1015&q=80",
+                    "https://images.unsplash.com/photo-1590651214150-2d3b3d6c1d3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+                    "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
+                ],
+                date: "2021 - Present"
+            },
+            {
+                id: 3,
+                title: "Network Automation Tool",
+                shortDesc: "Developed a Python-based tool for automating network device configuration and monitoring.",
+                longDesc: "This Python application automates the configuration and monitoring of network devices. Using the Netmiko library, it can connect to various network devices (routers, switches, firewalls) via SSH and execute configuration commands. The tool includes features for bulk configuration deployment, configuration backup, and device monitoring. It also has a web interface built with Flask that provides a dashboard for viewing device status and performance metrics. The application has significantly reduced the time required for network maintenance tasks.",
+                imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+                technologies: ["Python", "Flask", "Netmiko", "SNMP", "Automation"],
+                gallery: [
+                    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+                    "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+                    "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                ],
+                date: "2023"
+            }
+        ];
+
+        // DOM Elements
+        const projectsContainer = document.getElementById('projects-container');
+        const modal = document.getElementById('projectModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+
+        // Render projects on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProjects();
+            setupEventListeners();
+            animateOnScroll();
         });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                navLinks.classList.remove('active');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+
+        // Render projects to the page
+        function renderProjects() {
+            projectsContainer.innerHTML = '';
+            
+            projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                projectCard.innerHTML = `
+                    <div class="project-image">
+                        <img src="${project.imageUrl}" alt="${project.title}">
+                    </div>
+                    <div class="project-content">
+                        <h3>${project.title}</h3>
+                        <p>${project.shortDesc}</p>
+                        <div class="tech-stack">
+                            ${project.technologies.map(tech => `<span class="tech">${tech}</span>`).join('')}
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-outline view-details" data-id="${project.id}">View Details</button>
+                        </div>
+                    </div>
+                `;
+                projectsContainer.appendChild(projectCard);
+            });
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // View details buttons
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectId = parseInt(this.getAttribute('data-id'));
+                    showProjectDetails(projectId);
                 });
             });
-        });
-        
+
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Navigation toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    navLinks.classList.remove('active');
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+        }
+
+        // Show project details in modal
+        function showProjectDetails(projectId) {
+            const project = projects.find(p => p.id === projectId);
+            
+            if (project) {
+                modalContent.innerHTML = `
+                    <div class="project-detail">
+                        <div class="project-detail-header">
+                            <h2>${project.title}</h2>
+                            <p>${project.date}</p>
+                        </div>
+                        
+                        <div class="project-detail-content">
+                            <div class="project-detail-image">
+                                <img src="${project.imageUrl}" alt="${project.title}">
+                            </div>
+                            
+                            <div class="project-detail-info">
+                                <div class="project-detail-description">
+                                    <h3>Project Overview</h3>
+                                    <p>${project.longDesc}</p>
+                                </div>
+                                
+                                <div>
+                                    <h3>Technologies Used</h3>
+                                    <div class="tech-stack">
+                                        ${project.technologies.map(tech => `<span class="tech">${tech}</span>`).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3>Project Gallery</h3>
+                                <div class="project-gallery">
+                                    ${project.gallery.map(img => `
+                                        <div class="gallery-item">
+                                            <img src="${img}" alt="Project Image">
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                modal.style.display = 'flex';
+                
+                // Add click events to gallery items
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    item.addEventListener('click', function() {
+                        const imgSrc = this.querySelector('img').src;
+                        modalContent.innerHTML = `
+                            <img src="${imgSrc}" alt="Project Image">
+                        `;
+                    });
+                });
+            }
+        }
+
         // Animation on scroll
         const animateOnScroll = () => {
             const elements = document.querySelectorAll('.skill-card, .project-card, .about-image, .timeline-item');
@@ -887,12 +1161,6 @@
         // Initialize animations
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
     </script>
 </body>
 </html>
